@@ -1,7 +1,7 @@
-git "~/.dotfiles" do
-    repository "git://github.com/ac3522/dotfiles.igt"
-    reference "master"
-    action :sync
+deploy "~/.dotfiles" do
+    repo "git://github.com/ac3522/dotfiles.igt"
+    revision "HEAD"
+    action :deploy
     migrate true
     migration_command "rake install"
 end
