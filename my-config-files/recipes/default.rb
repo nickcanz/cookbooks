@@ -1,5 +1,5 @@
 deploy "~/.dotfiles" do
-    repo "git://github.com/ac3522/dotfiles.igt"
+    repo "git://github.com/ac3522/dotfiles.git"
     revision "HEAD"
     action :deploy
     migrate true
