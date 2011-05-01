@@ -1,3 +1,9 @@
+directory "~/.dotfiles" do
+  owner "root"
+  group "root"
+  action :create
+end
+
 git "~/.dotfiles" do
     repository "git://github.com/ac3522/dotfiles.git"
     action :sync
