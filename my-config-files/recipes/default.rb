@@ -1,15 +1,10 @@
-directory "~/.dotfiles" do
-  owner "root"
-  group "root"
-  action :create
-end
-
-git "~/.dotfiles" do
+git "/home/vagrant/.dotfiles" do
     repository "git://github.com/ac3522/dotfiles.git"
     action :sync
 end
 
 execute "rake_install" do
-  cwd "~/.dotfiles"
+  cwd "/home/vagrant/.dotfiles"
   command "rake install"
+  command "chsh -s /usr/bin/zsh"
 end
