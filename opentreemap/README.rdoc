@@ -1,9 +1,12 @@
 = DESCRIPTION:
-Recipe for Azavea's Open Tree Map
+Recipe for Azavea's Open Tree Map, https://github.com/azavea/OpenTreeMap.
+
+NOTE: The author of this recipe, Nicholas Canzoneri, is not affliated with Azavea in any way.
 
 = REQUIREMENTS:
 
-= ATTRIBUTES:
+[TODO, there's a lot.]
 
 = USAGE:
 
+include_recipe "opentreemap"
