@@ -1,0 +1,18 @@
+= DESCRIPTION:
+Installs a release of postgis from http://postgis.refractions.net/download/.
+
+Current version is 1.5.3
+
+= REQUIREMENTS:
+
+Currently on tested on Ubuntu 10.04.
+
+  - PostgreSQL Server, 8.3 or better
+  - Proj4, 4.5 or better
+  - Spatial Predicate /Geos, 3.1.1 or better
+  - libxml2
+
+= USAGE:
+
+include_recipe "postgis"
+
