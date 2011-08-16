@@ -1,8 +1,9 @@
 = DESCRIPTION:
+Installing curl
 
 = REQUIREMENTS:
-
-= ATTRIBUTES:
+Only works on Ubuntu. Tested 10.04.
 
 = USAGE:
 
+include_recipe 'curl'

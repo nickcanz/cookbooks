@@ -2,7 +2,7 @@
 # Cookbook Name:: curl
 # Recipe:: default
 #
-# Copyright 2011, YOUR_COMPANY_NAME
+# Copyright 2011, Nick Canzoneri
 #
 # All rights reserved - Do Not Redistribute
 #
