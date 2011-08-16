@@ -10,7 +10,7 @@
 include_recipe "postgresql::server"
 include_recipe "geos"
 
-%w{ proj-bin libxml2 libpq-dev postgresql-server-dev-8.4 }.each do |pkg|
+%w{ proj-bin libproj-dev libxml2 libpq-dev postgresql-server-dev-8.4 }.each do |pkg|
   apt_package pkg do
     action :install
   end
@@ -22,9 +22,9 @@ bash 'build and install postgis from source' do
   curl -C - -O http://postgis.refractions.net/download/postgis-1.5.3.tar.gz
   tar xzvf postgis-1.5.3.tar.gz
   cd postgis-1.5.3
-  ./configure --with-geosconfig=/usr/local/include/geos
+  ./configure
   make
   make check
-  make install
+  sudo make install
   EOH
 end
