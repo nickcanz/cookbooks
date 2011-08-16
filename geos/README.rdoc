@@ -1,8 +1,12 @@
 = DESCRIPTION:
+Cookbook to add the open source geometry engine GEOS, http://trac.osgeo.org/geos/.
+Version 3.3.0
 
 = REQUIREMENTS:
+Only tested on Ubuntu 10.04.
 
-= ATTRIBUTES:
+ - curl
 
 = USAGE:
 
+include_recipe 'geos'
