@@ -7,6 +7,7 @@
 # All rights reserved - Do Not Redistribute
 
 include_recipe "curl"
+include_recipe "build-essential"
 
 apt_package "autotools-dev" do
   action :install
