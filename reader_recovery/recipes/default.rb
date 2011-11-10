@@ -1,3 +1,6 @@
+include_recipe "rvm"
+include_recipe "rvm::mri_1.9.3"
+
 %w{ rails }.each do | my_gem |
   gem_package my_gem do
     action :install
