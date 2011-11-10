@@ -23,11 +23,10 @@ include_recipe "nodejs"
 package "curl"
 
 bash "install npm - package manager for node" do
-  cwd "/usr/local/src"
   user "root"
-  code <<-EOH
-    curl http://npmjs.org/install.sh | sudo sh
-  EOH
-  not_if "#{node[:nodejs][:dir]}/bin/npm -v 2>&1 | grep '#{node[:nodejs][:npm]}'"
+    cwd "/tmp"
+    code <<-EOH
+    curl http://npmjs.org/install.sh | clean=no sh
+    EOH
+    not_if "#{node[:nodejs][:dir]}/bin/npm -v 2>&1 | grep '#{node[:nodejs][:npm]}'"
 end
-
