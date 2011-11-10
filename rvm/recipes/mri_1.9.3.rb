@@ -10,3 +10,7 @@ bash "making ruby 1.9.3 the default in rvm" do
   user "root"
   code "rvm --default 1.9.3"
 end
+
+gem_package "chef" do
+  action :install
+end

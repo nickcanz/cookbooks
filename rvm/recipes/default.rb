@@ -1,3 +1,6 @@
+include_recipe "curl"
+include_recipe "git"
+
 bash "Installing rvm from command" do
   cwd "/tmp"
   code <<-EOH
