@@ -21,4 +21,5 @@ bash "install coffeescript" do
   code <<-EOH
   sudo npm install -g coffee-script
   EOH
+  not_if "npm ls -g | grep coffee-script"
 end
