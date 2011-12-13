@@ -7,7 +7,7 @@ include_recipe "rvm::mri_1.9.3"
   end
 end
 
-%w{ sqlite3 libsqlite3-dev }.each do |pkg|
+%w{ postgresql libpq-dev postgresql-contrib }.each do |pkg|
   apt_package pkg do
     action :install
   end
