@@ -8,3 +8,10 @@ bash "Installing rvm from command" do
   EOH
   not_if "which rvm | grep ."
 end
+
+bash "reload bash" do
+  cwd "/tmp"
+  code <<-EOH
+  exec bash
+  EOH
+end
