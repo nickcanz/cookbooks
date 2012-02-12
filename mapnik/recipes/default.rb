@@ -3,11 +3,3 @@
     action :install
   end
 end
-
-bash "install tilelite server" do
-  cwd "/tmp"
-  code <<-EOH
-  sudo easy_install tilelite
-  EOH
-end
-
