@@ -1,3 +1,5 @@
+include_recipe 'couchbase'
+
 bash "start couchbase bucket" do
   cwd '/tmp'
   code <<-EOH

@@ -1,3 +1,5 @@
+include_recipe 'couchbase'
+
 bash "Join server ones cluster" do
   cwd "/tmp"
   code <<-EOH
