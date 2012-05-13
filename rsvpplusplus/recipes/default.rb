@@ -56,8 +56,20 @@ postgresql_database_user 'rsvpplusplus_test' do
 end
 #}}}
 
-include_recipe "nodejs"
-include_recipe "nodejs::npm"
+
+bash "add node repository" do
+  cwd '/tmp'
+  code <<-EOH
+  sudo add-apt-repository ppa:chris-lea/node.js
+  EOH
+  #sudo apt-get update
+end
+
+%w{ python-software-properties nodejs npm }.each{ |pkg|
+  package pkg do
+    action :install
+  end
+}
 
 bash "install coffeescript" do
   cwd "/tmp"
